@@ -1,0 +1,28 @@
+<div class="content">
+    <div class="box">
+            
+            <div *ngFor="let view of viewAdditionalData">
+                    
+                    <mat-form-field color="accent" appearance="legacy">
+                        <mat-label>{{view.labelDate}}</mat-label>
+                        <input matInput type="text" disabled="true" value="{{view.dtInclusion | date: 'dd/MM/yyyy H:mm:ss' }}"  >
+                    </mat-form-field>
+        
+                    <mat-form-field class="form-field">
+                        <mat-label>{{view.labelResp}}</mat-label>
+                        <input matInput type="text" disabled="true" value="{{view.userName}}"  >
+                    </mat-form-field>
+            </div>
+              
+    </div>
+    
+<!--     <div>
+        <section>
+            <div class="example-button-row">
+                <button mat-raised-button color="primary" (click)="updateData()">Atualizar</button>
+            </div>
+        </section>
+    </div> -->
+ 
+
+</div>

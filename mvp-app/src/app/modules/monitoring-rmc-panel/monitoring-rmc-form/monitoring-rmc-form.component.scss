@@ -1,0 +1,32 @@
+.content-panel {
+
+    padding: 10px;
+}
+
+.box_contract {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  .box_periodic {
+    float: left;
+    width: 23.33%;
+    padding: 5px;
+  }
+
+  .box_reference {
+    float: left;
+    width: 23.33%;
+    padding: 5px;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .full-width {
+    width: 80%;
+  }

@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span> MPV - PRODUTO VIÁVEL MINIMO </span>
+        
+        <!--
+        <div style="margin-left: 5px;"> 
+            <span>  </span>
+            <label style="font-size: 9px;">{{ test }}</label> 
+        </div>
+        -->
+        
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px" class="font-header">
+                <li>
+                    <label>Usuário: <small>{{ username }}</small></label>
+                </li>
+                <li>
+                    <label>Último Acesso: <small>{{ lastAccess | date: 'dd/MM/yyyy HH:mm:ss'}}</small></label>
+                </li>
+                <li>
+                    <label>Data do Sistema: <small>{{ now | date: 'dd/MM/yyyy HH:mm:ss'}}</small></label>
+                </li>
+                <li>
+                    <label>Versão: <small>{{versionApp}}</small></label>
+                </li>
+
+                <li>
+                    <button mat-button  (click)="logout()">
+                         SAIR
+                    </button>
+                </li>
+            </ul>
+        </div>    
+
+    </mat-toolbar-row>
+</mat-toolbar>

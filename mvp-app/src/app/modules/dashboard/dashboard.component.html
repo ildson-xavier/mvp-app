@@ -1,0 +1,25 @@
+<div>
+    <h1>Real Time</h1>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="grid-container">
+<div *ngFor="let data of chartData" class="chart grid-item">
+  
+   <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{data.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <canvas #pr_chart></canvas>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="findJobs()">JOBS</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>
+
+<br/>
+<mat-divider></mat-divider>

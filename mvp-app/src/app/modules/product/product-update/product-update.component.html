@@ -1,0 +1,36 @@
+<div class="container">
+    <mat-toolbar>
+        <span class="fill-remaining-space"></span>
+        <span>>> Atualização de Produto</span>
+        <span class="fill-remaining-space"></span>
+    </mat-toolbar>
+</div>
+<hr/>
+<div class="for-fields">
+    <div fxLayoutAlign="left" fxFlexFill="center">
+        <mat-card >
+            <form fxLayoutAlign="Stretch" fxLayout="column" [formGroup]="formGroup" (ngSubmit)="updateProduct()" autocomplete="off">
+                <mat-form-field>
+                    <input matInput placeholder="Id*" formControlName="id" [(ngModel)]="productModel.id">
+                </mat-form-field>
+                
+                <mat-form-field>
+                    <input matInput placeholder="Descrição*" formControlName="description" [(ngModel)]="productModel.description">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <input matInput placeholder="Valor*" formControlName="price" [(ngModel)]="productModel.price">
+                </mat-form-field>
+                <hr/>
+                <div fxLayout="row">
+                    <div style ="padding: 0px 20px 10px 0px; width:100%; text-align: left;">
+                        <button type="button" (click)="cancel()" mat-raised-button color="warn">Cancelar</button>
+                    </div>
+                    <div style ="width:100%; text-align: right;" class="alternative">
+                        <button type="submit" mat-raised-button color="primary">Salvar</button>
+                    </div>
+                </div>
+            </form>
+        </mat-card>
+    </div>    
+</div>

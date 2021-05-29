@@ -1,0 +1,17 @@
+<div class="container">
+    <mat-toolbar color="primary">
+        <span class="fill-remaining-space"></span>
+        <span class="title">Confirmar Exclusão</span>
+        <span class="fill-remaining-space"></span>
+    </mat-toolbar>
+    <div class="content-panel">
+            <div mat-dialog-content>
+                
+                <div>
+                    <button class="button-positon" mat-raised-button color="primary" (click)="onNoClick()">Sim</button>
+                    <button class="button-positon" mat-raised-button color="accent" [mat-dialog-close]="data.name" cdkFocusInitial>Não</button>
+                </div>
+
+        </div>
+    </div>
+</div>

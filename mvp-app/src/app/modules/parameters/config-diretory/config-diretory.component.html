@@ -1,0 +1,10 @@
+<div class="content">
+    <div *ngFor="let dir of generalParameters">
+
+        <mat-form-field class="example-form-field">
+            <mat-label>{{dir.dsParameter}}</mat-label>
+            <input matInput type="text" disabled="true" value="{{dir.vlParameter}}">
+        </mat-form-field>
+
+    </div>
+</div>

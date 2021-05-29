@@ -1,0 +1,44 @@
+<div class="content-panel">
+    
+        <mat-card>
+        <div mat-dialog-content>
+            
+            <form [formGroup]="form" (ngSubmit)="submit()">
+
+                <div class="clearfix">
+                    <div class="box_contract">
+                        <mat-form-field appearance="legacy" class="full-width">
+                             <mat-label>Busca por Dossiê (Contrato): </mat-label>
+                             <input matInput maxlength="100" formControlName="contract">
+                        </mat-form-field>
+                    </div>
+                    <div class="box_periodic">
+                        <mat-form-field  appearance="legacy" class="data-hora">
+                            <mat-label>Período Inicial:</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="dtBegin" [(ngModel)]="isFilled" >
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="legacy" class="data-hora">
+                            <mat-label>Período Final:</mat-label>
+                            <input matInput [matDatepicker]="picker1" formControlName="dtEnd">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="box_reference" [hidden]="isTrue()">
+                        <mat-form-field appearance="legacy" class="data-hora" >
+                            <mat-label>Referência (MM/AAAA):</mat-label>
+                            <input matInput formControlName="reference"  appDateMaskCustom>
+                        </mat-form-field>
+                    </div>
+
+                    <button type="submit" mat-raised-button color="primary" style="margin-top: 7%">Pesquisar</button>
+                </div>
+            </form> 
+            
+        </div>
+       
+    </mat-card>
+</div>

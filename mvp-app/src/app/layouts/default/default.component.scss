@@ -1,0 +1,25 @@
+  
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  mat-drawer {
+    //background-image: linear-gradient(to bottom, #a0be5b, #1b5e20);
+    background: #a0be5b;
+    background: -moz-linear-gradient(-45deg, #a0be5b 0%, #6aae68 57%, #15957e 100%);
+    background: -webkit-linear-gradient(-45deg, #a0be5b 0%, #6aae68 57%, #15957e 100%);
+    background: linear-gradient(135deg, #a0be5b 0%, #6aae68 57%, #15957e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0be5b', endColorstr='#15957e',GradientType=1 );
+    width: 300px;
+  }
+  
+  mat-drawer-container {
+    height: 100%;
+    background-image: linear-gradient(to bottom, #ffffff, #d1d1d1);
+  }
+  
+  mat-drawer-content {
+    padding: 20px;
+  }

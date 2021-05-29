@@ -1,0 +1,46 @@
+<div class="container content">
+    <mat-toolbar color="primary">
+        <span class="fill-remaining-space"></span>
+        <span class="title"> Parâmetros Gerais</span>
+        <span class="fill-remaining-space"></span>
+    </mat-toolbar>
+
+  <div class="content-panel">
+      <mat-accordion>
+          <mat-expansion-panel [expanded]="step === 0"  hideToggle>
+            <mat-expansion-panel-header class="color-header disable_ripple">
+              <mat-panel-title class="color-header">
+                Configuração de Serviço DATAPREV
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+            <app-config-dataprev (valueEmitter)="closeGrid( $event )" (editAvaliabilityEmitter)="editAvaliabilityGrid( $event )"></app-config-dataprev>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+<!--         <mat-accordion>
+            <mat-expansion-panel [expanded]="step === 0"  hideToggle>
+              <mat-expansion-panel-header class="color-header disable_ripple">
+                <mat-panel-title class="color-header">
+                  Configuração de Diretorio - Troca de informações com o SICLID
+                </mat-panel-title>
+  
+              </mat-expansion-panel-header>
+              <app-config-diretory></app-config-diretory>
+            </mat-expansion-panel>
+          </mat-accordion> -->
+          <mat-accordion>
+              <mat-expansion-panel [expanded]="step === 0"  hideToggle>
+                <mat-expansion-panel-header class="color-header disable_ripple">
+                  <mat-panel-title class="color-header">
+                    Dados Complementares
+                  </mat-panel-title>
+    
+                </mat-expansion-panel-header>
+                <app-data-complement [valeuEmitter]="returnCloseGrid" [editAvaliabilityEmitter]=returnEditAvaliabilityGrid></app-data-complement>
+              </mat-expansion-panel>
+            </mat-accordion>
+  </div>
+
+
+</div>

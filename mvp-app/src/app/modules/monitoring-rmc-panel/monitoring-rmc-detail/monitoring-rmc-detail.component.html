@@ -1,0 +1,78 @@
+<div class="container content">
+    <mat-toolbar color="primary">
+        <span class="fill-remaining-space"></span>
+        <span class="title"> DETALHAMENTO DAS SOLICITAÇÕES</span>
+        <span class="fill-remaining-space"></span>
+    </mat-toolbar>
+
+    <div class="content-panel">
+        <div class="example-container mat-elevation-z8">
+            <table mat-table [dataSource]="viewInclusion" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="captureDate">
+                    <th mat-header-cell *matHeaderCellDef class="header-color"> Data da Captura </th>
+                    <td mat-cell *matCellDef="let view"> {{view.captureDate}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="qtdContractCaptured">
+                    <th mat-header-cell *matHeaderCellDef class="header-color"> Qtd Contratos Capturados </th>
+                    <td mat-cell *matCellDef="let view"> {{view.qtdContractCaptured}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="sendDate">
+                    <th mat-header-cell *matHeaderCellDef class="header-color"> Data Envio </th>
+                    <td mat-cell *matCellDef="let view"> {{view.sendDate }} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="qtdContractSend">
+                    <th mat-header-cell *matHeaderCellDef class="header-color"> Qtd Contratos Enviados </th>
+                    <td mat-cell *matCellDef="let view"> {{view.qtdContractSend}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="exclusionReason">
+                    <th mat-header-cell *matHeaderCellDef class="header-color"> Motivo Exclusão </th>
+                    <td mat-cell *matCellDef="let view"> {{view.exclusionReason}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="qtdContractAccepted">
+                    <th mat-header-cell *matHeaderCellDef class="header-color"> Qtd Contratos Aceitos </th>
+                    <td mat-cell *matCellDef="let view"> {{view.qtdContractAccepted}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="qtdContractRejected">
+                    <th mat-header-cell *matHeaderCellDef class="header-color"> Qtd Contratos Rejeitados </th>
+                    <td mat-cell *matCellDef="let view"> {{view.qtdContractRejected}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="idFileControl">
+                    <th mat-header-cell *matHeaderCellDef class="header-color"> Id Arquivo </th>
+                    <td mat-cell *matCellDef="let view"> {{view.idFileControl}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="nameFile">
+                    <th mat-header-cell *matHeaderCellDef class="header-color"> Nome Arquivo </th>
+                    <td mat-cell *matCellDef="let view"> {{view.nameFile}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+                </tr>
+
+            </table>
+        </div>
+        <br>
+        <mat-divider></mat-divider>
+        <mat-tab-group>
+            <mat-tab label="EXCLUSÃO DE EMPRÉSTIMO CONSIGNADO - ACEITAS">
+                <app-success-rmc-detail [idFileControl]="idFileControl" [contract]="contract"></app-success-rmc-detail>
+            </mat-tab>
+            <mat-tab label="EXCLUSÃO DE EMPRÉSTIMO CONSIGNADO - REJEITADAS">
+                <app-failure-rmc-detail [idFileControl]="idFileControl" [contract]="contract"></app-failure-rmc-detail>
+            </mat-tab>
+        </mat-tab-group>
+
+        <div mat-dialog-actions class="button-positon">
+            <button mat-raised-button color="accept" (click)="backHome()">Fechar</button>
+        </div>
+    </div>
+</div>

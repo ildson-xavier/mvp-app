@@ -1,0 +1,56 @@
+<div class="container">
+    <mat-toolbar>
+        <span class="fill-remaining-space"></span>
+        <span>>> Detalhes do produto</span>
+        <span class="fill-remaining-space"></span>
+    </mat-toolbar>
+</div>
+
+<hr/>
+
+<div fxLayoutAlign="left top"  class="main-div" style="min-width: 550px;">
+
+    <mat-card  fxFlex="50">
+        <div *ngIf="product" style="min-width: 550px;">
+            
+            <div fxLayout="row">
+                <div style ="padding: 0px 20px 10px 0px; text-align: right; width:20%; ">
+                    <label><b>Id: </b></label>
+                  </div>
+                  <div>
+                       {{product.id}}
+                  </div>
+            </div>
+
+            <div fxLayout="row">
+                <div style ="padding: 0px 20px 10px 0px; text-align: right; width:20%; ">
+                    <label><b>Descrição: </b></label>
+                  </div>
+                  <div>
+                       {{product.description}}
+                  </div>
+            </div>
+
+            <div fxLayout="row">
+                <div style ="padding: 0px 20px 10px 0px; text-align: right; width:20%; ">
+                    <label><b>Valor: </b></label>
+                  </div>
+                  <div>
+                       {{product.price}}
+                  </div>
+            </div>
+            
+          </div>
+    </mat-card>
+
+</div>
+
+
+
+
+<br>
+<br>
+
+<div class="button">
+    <button (click)="list()" mat-raised-button color="primary">Voltar</button>
+</div>

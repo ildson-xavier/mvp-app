@@ -1,0 +1,32 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+  mat-form-field {
+    margin-right: 12px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .box {
+    width: 60%;
+  }
+
+  .form-field {
+    width: 50%;
+  }
+
+  .example-button-row {
+    display: table-cell;
+    //width: 490px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+
+  section {
+    margin-left: 40%;
+  }

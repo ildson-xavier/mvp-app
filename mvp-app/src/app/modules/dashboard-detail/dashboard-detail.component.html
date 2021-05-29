@@ -1,0 +1,73 @@
+<div>
+  <h1>Real Time</h1>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="grid-container">
+<div *ngFor="let data of chartData" class="chart grid-item">
+
+ <mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{data.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <canvas #pr_chart></canvas>
+  </mat-card-content>
+</mat-card>
+</div>
+</div>
+
+<br/>
+<mat-divider></mat-divider>
+<div class="table">
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="actions" sticky>
+    <th mat-header-cell *matHeaderCellDef>
+        Ação
+    </th>
+    <td mat-cell *matCellDef="let row">
+        <button mat-icon-button color="primary" (click)="openJobDialog()" >
+            <mat-icon>search</mat-icon>
+        </button>
+    </td>
+</ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="job">
+    <mat-header-cell *matHeaderCellDef> Job </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.job}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="total">
+    <mat-header-cell *matHeaderCellDef> Total </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.total}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="success">
+    <mat-header-cell *matHeaderCellDef> Success </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.success}} </mat-cell>
+  </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="stop">
+      <mat-header-cell *matHeaderCellDef> Stop </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.stop}} </mat-cell>
+    </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="error">
+    <mat-header-cell *matHeaderCellDef> Error </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.error}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+</div>
+<br/>
+<mat-divider></mat-divider>
+<br/>

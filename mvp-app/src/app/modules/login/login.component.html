@@ -1,0 +1,44 @@
+<div id="bg-top">
+    <div class="main-div">
+        <div fxLayoutAlign="center center" fxFlexFill="center"  [class.alternative] = "isTrue">
+        <mat-card>
+            <mat-toolbar color="primary" [class.alternative] = "isTrue">PSE-PÓS SALE EVENT</mat-toolbar>
+            <div fxLayout="row" style ="width:100%;">
+                <div style ="width:100%; text-align: left;">
+                    <form fxLayoutAlign="Stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="loginProcess()" autocomplete="off">
+                    
+                        <mat-form-field>
+                        <mat-label>Login</mat-label>
+                        <input matInput placeholder="Login" formControlName="login">
+                        </mat-form-field>
+        
+                        <mat-form-field>
+                            <mat-label>Senha</mat-label>
+                            <input type="password" matInput placeholder="Senha" formControlName="password">
+                        </mat-form-field>
+                        <button mat-raised-button type="submit" color="primary">Login</button>
+                        <br/>
+<!--                         <button 
+                            mat-raised-button 
+                            type="button" 
+                            color="primary"
+                            (click)="changeTheme()">
+                            change (test)
+                        </button> -->
+                    </form>
+                </div>
+            </div>
+        </mat-card>
+        <div id="bg-bottom">
+            
+        </div>
+    </div>
+
+    
+    
+    
+    
+    <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="medium" type="square-jelly-box">  
+        <p style="color: white">aguarde...</p>  
+    </ngx-spinner> 
+</div>

@@ -1,0 +1,71 @@
+.gradiente-Verde .gradiente-cor {
+    background: #a0be5b;
+    background: -moz-linear-gradient(-45deg, #a0be5b 0%, #6aae68 57%, #15957e 100%);
+    background: -webkit-linear-gradient(-45deg, #a0be5b 0%, #6aae68 57%, #15957e 100%);
+    background: linear-gradient(135deg, #a0be5b 0%, #6aae68 57%, #15957e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0be5b', endColorstr='#15957e',GradientType=1 );
+  }
+  
+  #bg-top {
+    //background-image: linear-gradient(to bottom, #a0be5b, #1b5e20);
+    background: #a0be5b;
+    background: -moz-linear-gradient(-45deg, #a0be5b 0%, #6aae68 57%, #15957e 100%);
+    background: -webkit-linear-gradient(-45deg, #a0be5b 0%, #6aae68 57%, #15957e 100%);
+    background: linear-gradient(135deg, #a0be5b 0%, #6aae68 57%, #15957e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0be5b', endColorstr='#15957e',GradientType=1 );
+    width: 100%;
+    height: 100%;
+  }
+  
+  #bg-bottom {  
+    position: absolute;
+    height: 380px;
+    width: 155px;
+    background-image: url('src/Credito.png');
+    //padding-left: 0px 20px 0px 0px;
+    left: 80%;
+    top: -14%
+  }
+  
+  .main-div {
+    width: 30%;
+    position: absolute; 
+    top: 25%; 
+    left: 35%;
+  }
+  
+  .main-div mat-card {
+    padding: 0px;
+    box-shadow: 0px 0px 10px 2px rgb(71, 71, 71);
+  }
+  
+  .login-form {
+    padding: 20px;
+  }
+  
+  .mat-card {
+    width: 100%;
+    max-width: 350px;
+    min-width: 200px;
+  }
+  
+  /*
+  :host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  
+    .material-icons {
+        vertical-align: middle;
+        margin-left: 1px;
+    }
+  }
+  .mat-form-field {
+    width: 100%;
+    min-width: 350px;
+  }
+  .button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  */

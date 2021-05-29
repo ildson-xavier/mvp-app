@@ -1,0 +1,18 @@
+<div class="container content">
+        <mat-toolbar color="primary">
+            <span class="fill-remaining-space"></span>
+            <span class="title"> Painel de Acompanhamento de Solicitações - DATAPREV </span>
+            <span class="fill-remaining-space"></span>
+        </mat-toolbar>
+
+    
+        <div class="content-panel">
+            <app-monitoring-form  (paramEmitter)="emitterParam( $event )"></app-monitoring-form>
+            <mat-divider></mat-divider>
+            <app-monitoring-table [param2]="paramEmitter"></app-monitoring-table>
+          
+            <div mat-dialog-actions class="button-positon">
+                <button mat-raised-button color="accept" (click)="backHome()">Fechar</button>
+            </div>
+        </div>
+</div>

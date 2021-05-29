@@ -1,0 +1,27 @@
+<div id="bg-top">
+    <div class="main-div">
+        <div fxLayoutAlign="center center" fxFlexFill="center" >
+        <mat-card>
+            <mat-toolbar color="primary">Falha na autenticação com o PSE</mat-toolbar>
+            <div fxLayout="row" style ="width:100%;">
+                <div style ="width:100%; text-align: left; padding: 40px;">
+                   <label>Solicite acesso ao PSE via portal GI clicando  </label>
+                   <a href="https://portalgi.cetelem.com.br" target="blank">aqui</a>
+                    <br><br>
+                    <button (click)="login()" mat-raised-button>Voltar para página de login</button>
+                </div>
+            </div>
+        </mat-card>
+        <div id="bg-bottom">
+            
+        </div>
+    </div>
+
+    
+    
+    
+    
+    <ngx-spinner bdColor="rgba(51, 51, 51, 0.8)" size="medium" type="square-jelly-box">  
+        <p style="color: white">aguarde...</p>  
+    </ngx-spinner> 
+</div>
