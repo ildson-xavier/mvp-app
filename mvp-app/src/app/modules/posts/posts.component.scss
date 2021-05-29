@@ -1,5 +1,5 @@
 .example-container {
-    height: 400px;
+    height: 80%;
     width: 100%;
     overflow: auto;
   }
@@ -39,6 +39,10 @@
     min-width: 150px;
   }
 
+  .with-another-columns {
+    min-width: 50px;
+  }
+
   td  {
     font-size: 10px;
     text-align: center;
@@ -50,10 +54,27 @@
    text-align: center !important;
    border: 1px solid rgb(141, 141, 141);
    background-color: rgb(132, 243, 156);
-   height: 100px !important;
+   height: 140px !important;
   }
 
   .cell-selected {
     background: rgb(221, 243, 19);
     padding: 20%;
   }
+
+  .cell-selected-green {
+    background: rgb(19, 243, 38);
+    padding: 20%;
+  }
+
+  .cell-selected-yellow {
+    background: rgb(239, 243, 19);
+    padding: 20%;
+  }
+
+  .cell-selected-red {
+    background: rgb(243, 71, 19);
+    padding: 20%;
+  }
+
+ 

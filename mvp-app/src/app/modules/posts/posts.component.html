@@ -1,3 +1,4 @@
+
 <div class="example-container mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
   
@@ -5,250 +6,298 @@
       <ng-container matColumnDef="sup" sticky >
         <th mat-header-cell *matHeaderCellDef ><span>Sup</span>  </th>
         <td mat-cell *matCellDef="let element" class="with-column"> {{element.sup}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
       </ng-container>
   
       <!-- Position Column -->
       <ng-container matColumnDef="vend">
         <th mat-header-cell *matHeaderCellDef> Vend </th>
         <td mat-cell *matCellDef="let element" class="with-column"> {{element.vend}} </td>
+        <<td mat-footer-cell *matFooterCellDef>  </td>
       </ng-container>
   
       <!-- Weight Column -->
       <ng-container matColumnDef="codTime">
         <th mat-header-cell *matHeaderCellDef> Cod. Time </th>
         <td mat-cell *matCellDef="let element"> {{element.codTime}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
       </ng-container>
   
       <!-- Symbol Column -->
       <ng-container matColumnDef="ordem">
         <th mat-header-cell *matHeaderCellDef><span class="label-vertical">Ordem</span></th>
-        <td mat-cell *matCellDef="let element"> {{element.ordem}} </td>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.ordem}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
       </ng-container>
 
       <ng-container matColumnDef="dia">
         <th mat-header-cell *matHeaderCellDef><span class="label-vertical"> Dia </span></th>
-        <td mat-cell *matCellDef="let element"> {{element.dia}} </td>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.dia}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
       </ng-container>
 
       <ng-container matColumnDef="semana">
         <th mat-header-cell *matHeaderCellDef><span class="label-vertical">  Semana </span></th>
-        <td mat-cell *matCellDef="let element"> {{element.semana}} </td>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.semana}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
       </ng-container>
 
       <ng-container matColumnDef="contrato">
         <th mat-header-cell *matHeaderCellDef><span class="label-vertical">  Contrato </span></th>
-        <td mat-cell *matCellDef="let element"> {{element.contrato}} </td>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.contrato}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
       </ng-container>
 
       <ng-container matColumnDef="nasPalheiro">
         <th mat-header-cell *matHeaderCellDef><span class="label-vertical">  Nas. Palheiro </span></th>
-        <td mat-cell *matCellDef="let element"><span [ngClass]="element.nasPalheiro != ' ' ?  'cell-selected' : ' ' ">{{element.nasPalheiro}} </span> </td>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"><span [ngClass]="element.nasPalheiro != ' ' ?  'cell-selected' : ' ' ">{{element.nasPalheiro}} </span> </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>
       </ng-container>
 
       <ng-container matColumnDef="camelRyo">
         <th mat-header-cell *matHeaderCellDef><span class="label-vertical">  camelRyo </span></th>
-        <td mat-cell *matCellDef="let element"> <span [ngClass]="element.camelRyo != ' ' ?  'cell-selected' : ' ' ">{{element.camelRyo}} </span></td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="element.camelRyo != ' ' ?  'cell-selected' : ' ' ">{{element.camelRyo}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>  
+    </ng-container>
 
       <ng-container matColumnDef="kitEstrategico">
         <th mat-header-cell *matHeaderCellDef><span class="label-vertical">  kitEstrategico </span></th>
-        <td mat-cell *matCellDef="let element"> <span [ngClass]="element.kitEstrategico != ' ' ?  'cell-selected' : ' ' ">{{element.kitEstrategico}} </span></td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="element.kitEstrategico != ' ' ?  'cell-selected' : ' ' ">{{element.kitEstrategico}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>  
+    </ng-container>
 
       <ng-container matColumnDef="rebaixa">
         <th mat-header-cell *matHeaderCellDef><span class="label-vertical">  rebaixa </span></th>
-        <td mat-cell *matCellDef="let element"> <span [ngClass]="element.rebaixa != ' ' ?  'cell-selected' : ' ' ">{{element.rebaixa}} </span></td>
-      </ng-container> 
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="element.rebaixa != ' ' ?  'cell-selected' : ' ' ">{{element.rebaixa}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>  
+    </ng-container> 
 
       <ng-container matColumnDef="kitFocoCamel">
         <th mat-header-cell *matHeaderCellDef><span class="label-vertical">  kitFocoCamel </span></th>
-        <td mat-cell *matCellDef="let element"> <span [ngClass]="element.kitFocoCamel != ' ' ?  'cell-selected' : ' ' ">{{element.kitFocoCamel}} </span></td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="element.kitFocoCamel != ' ' ?  'cell-selected' : ' ' ">{{element.kitFocoCamel}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>  
+    </ng-container>
 
       <ng-container matColumnDef="baseRyoOcb">
         <th mat-header-cell *matHeaderCellDef> <span class="label-vertical"> baseRyoOcb </span></th>
-        <td mat-cell *matCellDef="let element"><span [ngClass]="element.baseRyoOcb != ' ' ?  'cell-selected' : ' ' ">{{element.baseRyoOcb}} </span></td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"><span [ngClass]="element.baseRyoOcb != ' ' ?  'cell-selected' : ' ' ">{{element.baseRyoOcb}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>  
+    </ng-container>
 
       <ng-container matColumnDef="pesquisa">
         <th mat-header-cell *matHeaderCellDef> <span class="label-vertical"> pesquisa </span></th>
-        <td mat-cell *matCellDef="let element"> {{element.pesquisa}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.pesquisa}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>  
+    </ng-container>
 
       <ng-container matColumnDef="hierarquia">
         <th mat-header-cell *matHeaderCellDef> hierarquia </th>
-        <td mat-cell *matCellDef="let element"> {{element.hierarquia}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-column"> {{element.hierarquia}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>  
+    </ng-container>
 
       <ng-container matColumnDef="nomeCliente">
         <th mat-header-cell *matHeaderCellDef> nomeCliente </th>
-        <td mat-cell *matCellDef="let element"> {{element.nomeCliente}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-column"> {{element.nomeCliente}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>  
+    </ng-container>
 
       <ng-container matColumnDef="endereco">
         <th mat-header-cell *matHeaderCellDef> endereco </th>
-        <td mat-cell *matCellDef="let element"> {{element.endereco}} </td>
+        <td mat-cell *matCellDef="let element" class="with-column"> {{element.endereco}} </td>
+        <td mat-footer-cell *matFooterCellDef> Total </td>
       </ng-container>
 
       <ng-container matColumnDef="mediaTriUlt3Meses">
-        <th mat-header-cell *matHeaderCellDef> mediaTriUlt3Meses </th>
-        <td mat-cell *matCellDef="let element"> {{element.mediaTriUlt3Meses}} </td>
+        <th mat-header-cell *matHeaderCellDef> <span class="label-vertical"> mediaTriUlt3Meses </span></th>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.mediaTriUlt3Meses}} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalMedia() | currency}} </td>
       </ng-container>
 
       <ng-container matColumnDef="vendaMaio">
-        <th mat-header-cell *matHeaderCellDef> vendaMaio </th>
-        <td mat-cell *matCellDef="let element"> {{element.vendaMaio}} </td>
-      </ng-container>
+        <th mat-header-cell *matHeaderCellDef> <span class="label-vertical"> vendaMaio </span></th>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.vendaMaio}} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalVendaMaio() | currency}} </td>  
+    </ng-container>
 
       <ng-container matColumnDef="objetivoTtMaio">
-        <th mat-header-cell *matHeaderCellDef> objetivoTtMaio </th>
-        <td mat-cell *matCellDef="let element"> {{element.objetivoTtMaio}} </td>
-      </ng-container>
+        <th mat-header-cell *matHeaderCellDef> <span class="label-vertical"> objetivoTtMaio </span></th>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.objetivoTtMaio}} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalObjetivoMaio() | currency}} </td>  
+    </ng-container>
 
       <ng-container matColumnDef="lacunaMes">
-        <th mat-header-cell *matHeaderCellDef> lacunaMes </th>
-        <td mat-cell *matCellDef="let element"> {{element.lacunaMes}} </td>
-      </ng-container>
+        <th mat-header-cell *matHeaderCellDef> <span class="label-vertical">  lacunaMes </span></th>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.lacunaMes}} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalLacunaMes() | currency}} </td>  
+    </ng-container>
 
       <ng-container matColumnDef="jTi">
-        <th mat-header-cell *matHeaderCellDef> jTi </th>
-        <td mat-cell *matCellDef="let element"> {{element.jTi}} </td>
-      </ng-container>
+        <th mat-header-cell *matHeaderCellDef> <span class="label-vertical"> jTi </span></th>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.jTi}} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalJti() | currency}} </td>  
+    </ng-container>
 
       <ng-container matColumnDef="isqueiro">
-        <th mat-header-cell *matHeaderCellDef> isqueiro </th>
-        <td mat-cell *matCellDef="let element"> {{element.isqueiro}} </td>
-      </ng-container>
+        <th mat-header-cell *matHeaderCellDef> <span class="label-vertical"> isqueiro </span></th>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.isqueiro}} </td>
+        <td mat-footer-cell *matFooterCellDef> {{getTotalIsqueiro() | currency}} </td>  
+    </ng-container>
 
       <ng-container matColumnDef="cb">
         <th mat-header-cell *matHeaderCellDef> cb </th>
-        <td mat-cell *matCellDef="let element"> {{element.cb}} </td>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.cb)">{{element.cb}} </span></td>
       </ng-container>
 
       <ng-container matColumnDef="cbSoft">
         <th mat-header-cell *matHeaderCellDef> cbSoft </th>
-        <td mat-cell *matCellDef="let element"> {{element.cbSoft}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.cbSoft)">{{element.cbSoft}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="cy">
         <th mat-header-cell *matHeaderCellDef> cy </th>
-        <td mat-cell *matCellDef="let element"> {{element.cy}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.cy)">{{element.cy}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="cySoft">
         <th mat-header-cell *matHeaderCellDef> cySoft </th>
-        <td mat-cell *matCellDef="let element"> {{element.cySoft}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.cySoft)">{{element.cySoft}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="cdp">
         <th mat-header-cell *matHeaderCellDef> cdp </th>
-        <td mat-cell *matCellDef="let element"> {{element.cdp}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.cdp)">{{element.cdp}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="cdg">
         <th mat-header-cell *matHeaderCellDef> cdg </th>
-        <td mat-cell *matCellDef="let element"> {{element.cdg}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"><span [ngClass]="setColor(element.cdg)">{{element.cdg}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="cdr">
         <th mat-header-cell *matHeaderCellDef> cdr </th>
-        <td mat-cell *matCellDef="let element"> {{element.cdr}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.cdr)">{{element.cdr}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="cryo">
         <th mat-header-cell *matHeaderCellDef> cryo </th>
-        <td mat-cell *matCellDef="let element"> {{element.cryo}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.cryo)">{{element.cryo}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="ck">
         <th mat-header-cell *matHeaderCellDef> ck </th>
-        <td mat-cell *matCellDef="let element"> {{element.ck}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.ck)">{{element.ck}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="wb">
         <th mat-header-cell *matHeaderCellDef> wb </th>
-        <td mat-cell *matCellDef="let element"> {{element.wb}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.wb)">{{element.wb}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="wbSoft">
         <th mat-header-cell *matHeaderCellDef> wbSoft </th>
-        <td mat-cell *matCellDef="let element"> {{element.wbSoft}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.wbSoft)">{{element.wbSoft}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="wcSoft">
         <th mat-header-cell *matHeaderCellDef> wcSoft </th>
-        <td mat-cell *matCellDef="let element"> {{element.wcSoft}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.wcSoft)">{{element.wcSoft}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="ws">
         <th mat-header-cell *matHeaderCellDef> ws </th>
-        <td mat-cell *matCellDef="let element"> {{element.ws}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.ws)">{{element.ws}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="wr">
         <th mat-header-cell *matHeaderCellDef> wr </th>
-        <td mat-cell *matCellDef="let element"> {{element.wr}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.wr)">{{element.wr}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="wbs">
         <th mat-header-cell *matHeaderCellDef> wbs </th>
-        <td mat-cell *matCellDef="let element"> {{element.wbs}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.wbs)"> {{element.wbs}}</span> </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="we">
         <th mat-header-cell *matHeaderCellDef> we </th>
-        <td mat-cell *matCellDef="let element"> {{element.we}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.we)">{{element.we}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="wp">
         <th mat-header-cell *matHeaderCellDef> wp </th>
-        <td mat-cell *matCellDef="let element"> {{element.wp}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.wp)">{{element.wp}} </span> </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="wbld">
         <th mat-header-cell *matHeaderCellDef> wbld </th>
-        <td mat-cell *matCellDef="let element"> {{element.wbld}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.wbld)">{{element.wbld}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="djbm">
         <th mat-header-cell *matHeaderCellDef> djbm </th>
-        <td mat-cell *matCellDef="let element"> {{element.djbm}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.djbm)">{{element.djbm}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="djb">
         <th mat-header-cell *matHeaderCellDef> djb </th>
-        <td mat-cell *matCellDef="let element"> {{element.djb}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.djb)">{{element.djb}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="lam">
         <th mat-header-cell *matHeaderCellDef> lam </th>
-        <td mat-cell *matCellDef="let element"> {{element.lam}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.lam)">{{element.lam}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="nas">
         <th mat-header-cell *matHeaderCellDef> nas </th>
-        <td mat-cell *matCellDef="let element"> {{element.nas}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.nas)">{{element.nas}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="nasp">
         <th mat-header-cell *matHeaderCellDef> nasp </th>
-        <td mat-cell *matCellDef="let element"> {{element.nasp}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.nasp)">{{element.nasp}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="pueb">
         <th mat-header-cell *matHeaderCellDef> pueb </th>
-        <td mat-cell *matCellDef="let element"> {{element.pueb}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"> <span [ngClass]="setColor(element.pueb)">{{element.pueb}} </span></td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="inadim">
         <th mat-header-cell *matHeaderCellDef> inadim </th>
-        <td mat-cell *matCellDef="let element"><span [ngClass]="element.inadim != ' ' ?  'cell-selected' : ' ' ">{{element.inadim}} </span> </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-another-columns"><span [ngClass]="element.inadim != ' ' ?  'cell-selected' : ' ' ">{{element.inadim}} </span> </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
 
       <ng-container matColumnDef="cidade">
         <th mat-header-cell *matHeaderCellDef> cidade </th>
-        <td mat-cell *matCellDef="let element"> {{element.cidade}} </td>
-      </ng-container>
+        <td mat-cell *matCellDef="let element" class="with-column"> {{element.cidade}} </td>
+        <td mat-footer-cell *matFooterCellDef>  </td>   
+    </ng-container>
   
       <!-- Star Column -->
       <ng-container matColumnDef="star" stickyEnd>
@@ -258,7 +307,8 @@
         </td>
       </ng-container>
   
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-footer-row *matFooterRowDef="displayedColumns2; sticky: true"></tr>
     </table>
   </div>
