@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "mvp-app"
+    }
+  },
+  "defaultProject": "mvp-app",
+  "cli": {
+    "analytics": "2d08692f-d0d1-4c10-bf00-f14cc636ef8e"
+  }
 }
