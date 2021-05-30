@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve && npm run build && ng node --max_old_space_size=512 node_modules/.bin/react-scripts start  && node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "heroku-postbuild": "npm run build"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
