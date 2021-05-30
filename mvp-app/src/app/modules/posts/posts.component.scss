@@ -55,7 +55,10 @@
    text-align: center !important;
    border: 1px solid rgb(141, 141, 141);
    background-color: rgba(201, 221, 196, 0.993);
-   height: 140px !important;
+   padding: 1px !important;
+   margin-bottom: 0px !important;
+   max-height: 100% !important;
+   min-height: 50% !important;
   }
 
   .th-contr-green {
