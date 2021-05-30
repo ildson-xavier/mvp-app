@@ -6,6 +6,7 @@ import { DashboardDetailComponent } from 'src/app/modules/dashboard-detail/dashb
 import { JobDialogComponent} from 'src/app/modules/dashboard-detail/job-dialog/job-dialog.component'
 import { RouterModule } from '@angular/router';
 import { PostsComponent } from 'src/app/modules/posts/posts.component';
+import { DetailComponent } from 'src/app/modules/posts/detail/detail.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatSidenavModule, MatDividerModule, MatSortModule, MatPaginatorModule, MatTableModule, MatIconModule, 
   MatToolbarModule, MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatDialogModule, 
@@ -55,6 +56,7 @@ import { FailureRmcDetailComponent } from 'src/app/modules/monitoring-rmc-panel/
     PostsComponent,
     LoginComponent,
     ErrorComponent,
+    DetailComponent,
     
     ParameterComponent,
     ConfigDataprevComponent,

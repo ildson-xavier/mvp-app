@@ -53,8 +53,31 @@
    font-weight: bold !important;
    text-align: center !important;
    border: 1px solid rgb(141, 141, 141);
-   background-color: rgb(132, 243, 156);
+   background-color: rgba(201, 221, 196, 0.993);
    height: 140px !important;
+  }
+
+  .th-contr-green {
+    background-color: rgb(56, 202, 37) !important;
+  }
+
+  .th-nas-orange {
+     background-color: rgb(216, 159, 35) !important;
+  }
+  .th-cam-yellow {
+    background-color: rgb(177, 202, 37) !important;
+  }
+  .th-kit-grey {
+    background-color: rgb(123, 129, 122) !important;
+  }
+  .th-reb-red {
+    background-color: rgb(202, 42, 37) !important;
+  }
+  .th-foc-blue {
+    background-color: rgb(81, 37, 202) !important;
+  }
+  .th-base-purple {
+    background-color: rgb(214, 10, 233) !important;
   }
 
   .cell-selected {
@@ -77,4 +100,17 @@
     padding: 20%;
   }
 
- 
+  .example-second-footer-row td {
+    color: #900000;
+    font-size: 30px;
+  }
+
+  .th-detail {
+    height: 2px !important;
+    max-height: 3px !important;
+    font-size: 18px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    size: 2px;
+    background-color: rgba(201, 221, 196, 0.993);
+  }

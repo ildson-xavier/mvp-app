@@ -15,24 +15,26 @@ import { MonitoringDetailComponent } from './modules/monitoring-panel/monitoring
 import { MonitoringRmcDetailComponent } from './modules/monitoring-rmc-panel/monitoring-rmc-detail/monitoring-rmc-detail.component';
 import { MonitoringRmcPanelComponent } from './modules/monitoring-rmc-panel/monitoring-rmc-panel.component';
 import { DashboardDetailComponent } from './modules/dashboard-detail/dashboard-detail.component';
+import { DetailComponent } from './modules/posts/detail/detail.component';
 
 
 const routes: Routes = [
   { path: '',  component: LoginComponent },
   { path: 'login',  component: LoginComponent },
   { path: 'pse',  component: DefaultComponent,  children: [ 
-      {path: 'products', component: ProductListComponent},
+      //{path: 'products', component: ProductListComponent},
       //{path: 'parameters', component: ParameterComponent,   },  
       //{path: 'monitoring', component: MonitoringPanelComponent },
       //{path: 'monitoring/detail/:id/:idFileControl/:contract', component: MonitoringDetailComponent },
       //{path: 'monitoring-rmc', component: MonitoringRmcPanelComponent },
       //{path: 'monitoring-rmc/detail/:id/:idFileControl/:contract', component: MonitoringRmcDetailComponent} ,
-      {path: 'product/detail/:id', component: ProductDetailComponent},
+      /* {path: 'product/detail/:id', component: ProductDetailComponent},
       {path: 'product',  component: ProductCreateComponent},
-      {path: 'product/update/:id',  component: ProductUpdateComponent},
+      {path: 'product/update/:id',  component: ProductUpdateComponent}, */
       {path: 'dashboard',  component: DashboardComponent},
       {path: 'dashboard/jobs',  component: DashboardDetailComponent},
-      {path: 'posts', component: PostsComponent} 
+      {path: 'posts', component: PostsComponent},
+      {path: 'posts/detail', component: DetailComponent} 
     ]
   },
   

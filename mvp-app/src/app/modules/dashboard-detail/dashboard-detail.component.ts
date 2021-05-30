@@ -71,8 +71,8 @@ export class DashboardDetailComponent implements OnInit {
    createChart() {
      this.chartData = [
        {
-        title: 'AML',
-        labels: ["jobSun", "jobVigilance", "jobMediaNegative", "jobPepSerasa"],
+        title: 'Vendedor 1',
+        labels: ["Produto 1", "Produto 2", "Produto 3", "Produto 4"],
         datasets: [{ 
           data: [86,114,106,106,107,111,133],
           label: "Total",

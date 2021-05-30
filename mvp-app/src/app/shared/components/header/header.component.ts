@@ -34,7 +34,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() { 
     this.getUsername()
     this.getVersion()
-    this.getLoguser()
+    //this.getLoguser()
 
 /*     this.saveLogUser() */
     
@@ -42,7 +42,7 @@ export class HeaderComponent implements OnInit {
 
 
   getUsername() {
-    this.username =  'boladao' //this.authService.getUsername()
+    this.username =  'Bruno' //this.authService.getUsername()
     localStorage.setItem('user', this.username);
   }
 
@@ -101,13 +101,15 @@ export class HeaderComponent implements OnInit {
   }
 
   getVersion() {
-     this.versionService.getVersion()
+/*      this.versionService.getVersion()
      .subscribe(response => {
        console.log('getVersion >> '+response)
         this.versionApp = response.version
      }, errorResponse => {
        console.log(errorResponse)
-     }) 
+     })  */
+
+     this.versionApp = '1.0.0'
   }
 
   toggleSideBar() {

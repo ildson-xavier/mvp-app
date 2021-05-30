@@ -51,7 +51,7 @@ export class DashboardComponent implements OnInit {
    createChart() {
      this.chartData = [
        {
-        title: 'AML',
+        title: 'Verdedor 1',
         labels: ["Success","Stop", "Error"],
         datasets: [{
           data: [4,3,1],
@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit {
         }]
        },
        {
-        title: 'C360',
+        title: 'Verdedor 2',
         labels: ["Success","Stop", "Error"],
         datasets: [{
           data: [7,2,4],
@@ -87,7 +87,7 @@ export class DashboardComponent implements OnInit {
         }]
        },
        {
-        title: 'ECONSIG',
+        title: 'Verdedor 3',
         labels: ["Success","Stop", "Error"],
         datasets: [{
           data: [2,1,1],
@@ -105,7 +105,7 @@ export class DashboardComponent implements OnInit {
         }]
        },
        {
-        title: 'FUNCAO',
+        title: 'Verdedor 4',
         labels: ["Success","Stop", "Error"],
         datasets: [{
           data: [3,0,1],

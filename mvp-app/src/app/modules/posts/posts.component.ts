@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostsComponent implements OnInit {
   displayedColumns2: string[] = [
+	  'action',
   'sup',
   'vend',
   'codTime',
@@ -32,7 +34,8 @@ export class PostsComponent implements OnInit {
 	'isqueiro'
   ]
   displayedColumns =
-  ['sup',
+  ['action',
+  'sup',
 	'vend',
 	'codTime',
 	'ordem',
@@ -83,7 +86,7 @@ export class PostsComponent implements OnInit {
 	'cidade']
   dataSource = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     console.log('')
@@ -124,6 +127,12 @@ export class PostsComponent implements OnInit {
 
   getTotalIsqueiro() {
     return ELEMENT_DATA.map(e => e.isqueiro).reduce((acc, value) => acc + value, 0)
+  }
+
+  editDetail(row: any) {
+    console.log(row)
+
+    this.router.navigate([`/pse/posts/detail`])
   }
 
 }
