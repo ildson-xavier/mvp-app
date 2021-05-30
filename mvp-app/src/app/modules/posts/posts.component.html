@@ -185,8 +185,8 @@
     </ng-container>
 
       <ng-container matColumnDef="isqueiro">
-        <th mat-header-cell *matHeaderCellDef> <span class="label-vertical"> isqueiro </span></th>
-        <td mat-cell *matCellDef="let element" class="with-another-columns"> {{element.isqueiro}} </td>
+        <th mat-header-cell *matHeaderCellDef> <span class="label-vertical" style="width: 2px;"> isqueiro </span></th>
+        <td mat-cell *matCellDef="let element" class="with-another-columns" style="width: 3px;"> {{element.isqueiro}} </td>
         <td mat-footer-cell *matFooterCellDef> {{getTotalIsqueiro() | currency}} </td>  
     </ng-container>
 
