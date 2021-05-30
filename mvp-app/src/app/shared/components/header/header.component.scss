@@ -5,8 +5,12 @@ ul li {
 .mat-toolbar.mat-primary {
     background: #0e7227;
     color: #fff;
+    max-height: 4px !important;
   }
+.mat-toolbar-multiple-rows {
+    min-height: 46px;
+}
 
 .font-header {
-    font-size: 14px;
+    font-size: 12px;
 }

@@ -1,4 +1,4 @@
-<mat-accordion>
+<!-- <mat-accordion>
   <mat-expansion-panel>
     <mat-expansion-panel-header class="color-header">
       <mat-panel-title >
@@ -28,15 +28,14 @@
     </p>
 
   </mat-expansion-panel>
-</mat-accordion>
+</mat-accordion> -->
 
-<br/>
 <mat-divider></mat-divider>
 
 <div class="example-container mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
   
-        <ng-container matColumnDef="action" sticky>
+        <ng-container matColumnDef="action" >
             <th mat-header-cell *matHeaderCellDef style="width: 2px !important;">
                 Ação
             </th>
@@ -378,3 +377,4 @@
       <tr mat-footer-row *matFooterRowDef="displayedColumns2; sticky: true"></tr>
     </table>
   </div>
+  <mat-divider></mat-divider>
