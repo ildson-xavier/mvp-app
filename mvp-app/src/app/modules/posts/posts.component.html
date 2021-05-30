@@ -1,3 +1,34 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header class="color-header">
+      <mat-panel-title >
+        Filtro de Pesquisa
+      </mat-panel-title>
+      <mat-panel-description>
+        Escolha um dos campos para pesquisa de dados
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Supervisor</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Vendedor</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="form-field" appearance="fill">
+      <mat-label>Código Time</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <p>
+      <button mat-flat-button color="primary">Filtrar</button>
+    </p>
+
+  </mat-expansion-panel>
+</mat-accordion>
 
 <div class="example-container mat-elevation-z8">
     <table mat-table [dataSource]="dataSource">
